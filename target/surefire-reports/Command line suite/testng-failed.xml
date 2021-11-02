@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)" preserve-order="true">
+    <classes>
+      <class name="org.apidesign.bck2brwsr.vmtest.impl.Bck2BrwsrCase">
+        <methods>
+          <include name="executeCode"/>
+          <include name="executeCode"/>
+          <include name="executeCode"/>
+        </methods>
+      </class> <!-- org.apidesign.bck2brwsr.vmtest.impl.Bck2BrwsrCase -->
+      <class name="org.apidesign.bck2brwsr.vmtest.impl.CompareCase">
+        <methods>
+          <include name="compareResults"/>
+        </methods>
+      </class> <!-- org.apidesign.bck2brwsr.vmtest.impl.CompareCase -->
+      <class name="series.AppTest">
+        <methods>
+          <include name="initModel"/>
+        </methods>
+      </class> <!-- series.AppTest -->
+      <class name="org.apidesign.bck2brwsr.vmtest.impl.LaunchSetup">
+        <methods>
+          <include name="initializeLauncher"/>
+          <include name="shutDownLauncher"/>
+        </methods>
+      </class> <!-- org.apidesign.bck2brwsr.vmtest.impl.LaunchSetup -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->

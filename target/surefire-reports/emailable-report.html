@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.param,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.param td,table.param th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.param th {vertical-align:bottom}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.param td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.param tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing=0 cellpadding=0 class="param">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em">Command line test</td><td class="numi">1</td><td class="numi">1</td><td class="numi_attn">4</td><td class="numi">0</td><td class="numi">7.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<a id="summary"></a>
+<table cellspacing=0 cellpadding=0 class="passed">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">Command line test &#8212; failed (configuration methods)</th></tr>
+<tr class="failedodd"><td rowspan="1">org.apidesign.bck2brwsr.vmtest.impl.LaunchSetup<td><a href="#m1"><b>initializeLauncher</b>  </a></td><td class="numi">1</td><td>1635869531578</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Command line test &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="3">org.apidesign.bck2brwsr.vmtest.impl.Bck2BrwsrCase<td><a href="#m2"><b>executeCode</b> (run) </a><br>(modifyValueAssertChangeInModel[Brwsr])</td><td class="numi">1</td><td>1635869539050</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m3"><b>executeCode</b> (run) </a><br>(checkStringHashCode[Java])</td><td class="numi">1</td><td>1635869539050</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m4"><b>executeCode</b> (run) </a><br>(checkStringHashCode[JavaScript])</td><td class="numi">1</td><td>1635869539050</td><td class="numi">0</td></tr>
+<tr class="skippedeven"><td rowspan="1">org.apidesign.bck2brwsr.vmtest.impl.CompareCase<td><a href="#m5"><b>compareResults</b>  </a></td><td class="numi">1</td><td>1635869539199</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Command line test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">series.AppTest<td><a href="#m6"><b>testHelloMessage</b>  </a></td><td class="numi">1</td><td>1635869531575</td><td class="numi">3</td></tr>
+</table>
+<h1>Command line test</h1>
+<a id="m1"></a><h2>org.apidesign.bck2brwsr.vmtest.impl.LaunchSetup:initializeLauncher</h2>
+<div style="padding-left:3em">
+<p>javax.script.ScriptException: TypeError: stA0.at is not a function in &lt;eval&gt; at line number 2087</p>
+org.apidesign.bck2brwsr.launcher.JSLauncher.initialize(JSLauncher.java:80)
+<br/>at org.apidesign.bck2brwsr.vmtest.impl.LaunchSetup.initializeLauncher(LaunchSetup.java:69)
+<br/>39 lines not shown
+<p>Caused by TypeError: stA0.at is not a function in &lt;eval&gt; at line number 2087</p>
+jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)
+<br/>at jdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:392)
+<br/>at jdk.nashorn.api.scripting.NashornScriptEngine.invokeMethod(NashornScriptEngine.java:199)
+<br/>at org.apidesign.bck2brwsr.launcher.JSLauncher.initRhino(JSLauncher.java:104)
+<br/>at org.apidesign.bck2brwsr.launcher.JSLauncher.initialize(JSLauncher.java:72)
+<br/>at org.apidesign.bck2brwsr.vmtest.impl.LaunchSetup.initializeLauncher(LaunchSetup.java:69)
+<br/>39 lines not shown
+<p>Caused by TypeError: stA0.at is not a function</p>
+jdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+<br/>at jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:213)
+<br/>at jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:185)
+<br/>at jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:172)
+<br/>at jdk.nashorn.internal.runtime.Undefined.lookup(Undefined.java:102)
+<br/>at jdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:106)
+<br/>at jdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:98)
+<br/>at jdk.internal.dynalink.support.CompositeTypeBasedGuardingDynamicLinker.getGuardedInvocation(CompositeTypeBasedGuardingDynamicLinker.java:176)
+<br/>at jdk.internal.dynalink.support.CompositeGuardingDynamicLinker.getGuardedInvocation(CompositeGuardingDynamicLinker.java:124)
+<br/>at jdk.internal.dynalink.support.LinkerServicesImpl.getGuardedInvocation(LinkerServicesImpl.java:154)
+<br/>at jdk.internal.dynalink.DynamicLinker.relink(DynamicLinker.java:253)
+<br/>at jdk.nashorn.internal.scripts.Script$Recompilation$270$72930$\^eval\_.VM#fillInVMSkeleton#CLS-7#read__I(&lt;eval&gt;:2087)
+<br/>at jdk.nashorn.internal.scripts.Script$Recompilation$269$1832695$\^eval\_.VM#fillInVMSkeleton#CLS-106#readInt__I(&lt;eval&gt;:59649)
+<br/>at jdk.nashorn.internal.scripts.Script$Recompilation$268$1926348A$\^eval\_.VM#fillInVMSkeleton#CLS-115#read__VLjava_io_DataInputStream_2(&lt;eval&gt;:62509)
+<br/>at jdk.nashorn.internal.scripts.Script$Recompilation$251$1924818A$\^eval\_.VM#fillInVMSkeleton#CLS-115#cons__VLjava_io_InputStream_2(&lt;eval&gt;:62496)
+<br/>at jdk.nashorn.internal.scripts.Script$Recompilation$250$\^eval\_.VM#fillInVMSkeleton#CLS-103#compile__Ljava_lang_String_2Ljava_io_InputStream_2$:split-16(&lt;eval&gt;:51234)
+<br/>at jdk.nashorn.internal.scripts.Script$Recompilation$249$1523555A$\^eval\_.VM#fillInVMSkeleton#CLS-103#compile__Ljava_lang_String_2Ljava_io_InputStream_2(&lt;eval&gt;:51229)
+<br/>at jdk.nashorn.internal.scripts.Script$Recompilation$209$1447368AI$\^eval\_.VM#fillInVMSkeleton#CLS-96#load__Ljava_lang_Object_2Ljava_lang_String_2Z(&lt;eval&gt;:48841)
+<br/>at jdk.nashorn.internal.scripts.Script$Recompilation$205$1446126AAA$\^eval\_.VM#fillInVMSkeleton#CLS-96#load__Ljava_lang_Object_2Ljava_lang_Object_2Ljava_lang_String_2_3Ljava_lang_Object_2(&lt;eval&gt;:48770)
+<br/>at jdk.nashorn.internal.scripts.Script$Recompilation$203$2164651A$\^eval\_.VM#bck2brwsr#loadClass(&lt;eval&gt;:3593)
+<br/>at jdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:639)
+<br/>at jdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:494)
+<br/>at jdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:393)
+<br/>at jdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:199)
+<br/>at jdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:386)
+<br/>at jdk.nashorn.api.scripting.NashornScriptEngine.invokeMethod(NashornScriptEngine.java:199)
+<br/>at org.apidesign.bck2brwsr.launcher.JSLauncher.initRhino(JSLauncher.java:104)
+<br/>at org.apidesign.bck2brwsr.launcher.JSLauncher.initialize(JSLauncher.java:72)
+<br/>at org.apidesign.bck2brwsr.vmtest.impl.LaunchSetup.initializeLauncher(LaunchSetup.java:69)
+<br/>39 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m2"></a><h2>org.apidesign.bck2brwsr.vmtest.impl.CompareCase:compareResults</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m3"></a><h2>org.apidesign.bck2brwsr.vmtest.impl.Bck2BrwsrCase:executeCode</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m4"></a><h2>org.apidesign.bck2brwsr.vmtest.impl.Bck2BrwsrCase:executeCode</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m5"></a><h2>org.apidesign.bck2brwsr.vmtest.impl.Bck2BrwsrCase:executeCode</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<a id="m6"></a><h2>series.AppTest:testHelloMessage</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>

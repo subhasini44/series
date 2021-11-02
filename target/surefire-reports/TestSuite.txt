@@ -1,0 +1,43 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 4, Time elapsed: 8.61 sec <<< FAILURE!
+initializeLauncher(org.apidesign.bck2brwsr.vmtest.impl.LaunchSetup)  Time elapsed: 7.475 sec  <<< FAILURE!
+java.io.IOException: javax.script.ScriptException: TypeError: stA0.at is not a function in <eval> at line number 2087
+	at org.apidesign.bck2brwsr.launcher.JSLauncher.initialize(JSLauncher.java:80)
+	at org.apidesign.bck2brwsr.vmtest.impl.LaunchSetup.initializeLauncher(LaunchSetup.java:69)
+Caused by: javax.script.ScriptException: TypeError: stA0.at is not a function in <eval> at line number 2087
+	at jdk.nashorn.api.scripting.NashornScriptEngine.throwAsScriptException(NashornScriptEngine.java:470)
+	at jdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:392)
+	at jdk.nashorn.api.scripting.NashornScriptEngine.invokeMethod(NashornScriptEngine.java:199)
+	at org.apidesign.bck2brwsr.launcher.JSLauncher.initRhino(JSLauncher.java:104)
+	at org.apidesign.bck2brwsr.launcher.JSLauncher.initialize(JSLauncher.java:72)
+	... 39 more
+Caused by: <eval>:2087 TypeError: stA0.at is not a function
+	at jdk.nashorn.internal.runtime.ECMAErrors.error(ECMAErrors.java:57)
+	at jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:213)
+	at jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:185)
+	at jdk.nashorn.internal.runtime.ECMAErrors.typeError(ECMAErrors.java:172)
+	at jdk.nashorn.internal.runtime.Undefined.lookup(Undefined.java:102)
+	at jdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:106)
+	at jdk.nashorn.internal.runtime.linker.NashornLinker.getGuardedInvocation(NashornLinker.java:98)
+	at jdk.internal.dynalink.support.CompositeTypeBasedGuardingDynamicLinker.getGuardedInvocation(CompositeTypeBasedGuardingDynamicLinker.java:176)
+	at jdk.internal.dynalink.support.CompositeGuardingDynamicLinker.getGuardedInvocation(CompositeGuardingDynamicLinker.java:124)
+	at jdk.internal.dynalink.support.LinkerServicesImpl.getGuardedInvocation(LinkerServicesImpl.java:154)
+	at jdk.internal.dynalink.DynamicLinker.relink(DynamicLinker.java:253)
+	at jdk.nashorn.internal.scripts.Script$Recompilation$270$72930$\^eval\_.VM#fillInVMSkeleton#CLS-7#read__I(<eval>:2087)
+	at jdk.nashorn.internal.scripts.Script$Recompilation$269$1832695$\^eval\_.VM#fillInVMSkeleton#CLS-106#readInt__I(<eval>:59649)
+	at jdk.nashorn.internal.scripts.Script$Recompilation$268$1926348A$\^eval\_.VM#fillInVMSkeleton#CLS-115#read__VLjava_io_DataInputStream_2(<eval>:62509)
+	at jdk.nashorn.internal.scripts.Script$Recompilation$251$1924818A$\^eval\_.VM#fillInVMSkeleton#CLS-115#cons__VLjava_io_InputStream_2(<eval>:62496)
+	at jdk.nashorn.internal.scripts.Script$Recompilation$250$\^eval\_.VM#fillInVMSkeleton#CLS-103#compile__Ljava_lang_String_2Ljava_io_InputStream_2$:split-16(<eval>:51234)
+	at jdk.nashorn.internal.scripts.Script$Recompilation$249$1523555A$\^eval\_.VM#fillInVMSkeleton#CLS-103#compile__Ljava_lang_String_2Ljava_io_InputStream_2(<eval>:51229)
+	at jdk.nashorn.internal.scripts.Script$Recompilation$209$1447368AI$\^eval\_.VM#fillInVMSkeleton#CLS-96#load__Ljava_lang_Object_2Ljava_lang_String_2Z(<eval>:48841)
+	at jdk.nashorn.internal.scripts.Script$Recompilation$205$1446126AAA$\^eval\_.VM#fillInVMSkeleton#CLS-96#load__Ljava_lang_Object_2Ljava_lang_Object_2Ljava_lang_String_2_3Ljava_lang_Object_2(<eval>:48770)
+	at jdk.nashorn.internal.scripts.Script$Recompilation$203$2164651A$\^eval\_.VM#bck2brwsr#loadClass(<eval>:3593)
+	at jdk.nashorn.internal.runtime.ScriptFunctionData.invoke(ScriptFunctionData.java:639)
+	at jdk.nashorn.internal.runtime.ScriptFunction.invoke(ScriptFunction.java:494)
+	at jdk.nashorn.internal.runtime.ScriptRuntime.apply(ScriptRuntime.java:393)
+	at jdk.nashorn.api.scripting.ScriptObjectMirror.callMember(ScriptObjectMirror.java:199)
+	at jdk.nashorn.api.scripting.NashornScriptEngine.invokeImpl(NashornScriptEngine.java:386)
+	... 42 more
+
